@@ -1,5 +1,6 @@
 {
     "dependencies": {
-        "dnevnik-mos-ru-api": "^1.2.8"
+        "dnevnik-mos-ru-api": "^1.2.8",
+        "luxon": "^1.0.0"
     }
 }

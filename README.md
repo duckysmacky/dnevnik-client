@@ -41,7 +41,7 @@ node auth <логин> <пароль> <totp>
 node client help
 ```
 
-### Информацию о школе
+### Информация о школе
 ```bash
 node client schoolInfo
 ```
@@ -49,4 +49,9 @@ node client schoolInfo
 ### Профиль
 ```bash
 node client profile
+```
+
+### Средние оценки
+```bash
+node client averageMarks
 ```
