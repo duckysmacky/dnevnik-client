@@ -20,9 +20,9 @@ if (process.argv.length < 4) {
     let auth;
     if (process.argv.length == 5) {
         const totp = process.argv[4];
-        auth = new Dnevnik.PuppeteerAuthenticator(login, password, {headless: true, totp: totp});
+        auth = new Dnevnik.PuppeteerAuthenticator(login, password, {headless: "new", totp: totp});
     } else {
-        auth = new Dnevnik.PuppeteerAuthenticator(login, password, {headless: true});
+        auth = new Dnevnik.PuppeteerAuthenticator(login, password, {headless: "new"});
     }
 
     // Auth setup
