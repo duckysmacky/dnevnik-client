@@ -8,8 +8,16 @@ if (process.argv.length < 3) {
 }
 
 
-
 // General
+function listCommands() {
+    console.log("GENERAL\nschoolInfo\nprofile\n");
+    console.log("ACADEMIC\nsubjects\naverageMarks\nquarterMarks\nprogress\n");
+    console.log("BY TIME\nschedule [days from today]\nhomework [days from today] [days to]");
+    console.log("visits [days from today] [days to]\nbalance [months from current] [months to]\n")
+    console.log("BY ID\ngetTeacher <teacher id>\ngetAnswers <test id>\n");
+    console.log("MISC\nnotifications [type]\nmenu\n");
+}
+
 async function requestSchoolInfo(client) {
     let schoolInfo = await client.getSchoolInfo();
     console.log(schoolInfo);
@@ -165,12 +173,7 @@ async function requestMenu(client) {
 
     switch (process.argv[2]) {
         case "help":
-            console.log("GENERAL\nschoolInfo\nprofile\n");
-            console.log("ACADEMIC\nsubjects\naverageMarks\nquarterMarks\nprogress\n");
-            console.log("BY TIME\nschedule [days from today]\nhomework [days from today] [days to]");
-            console.log("visits [days from today] [days to]\nbalance [months from current] [months to]\n")
-            console.log("BY ID\ngetTeacher <teacher id>\ngetAnswers <test id>\n");
-            console.log("MISC\nnotifications [type]\nmenu\n");
+            listCommands();
             break;
 
         // General
