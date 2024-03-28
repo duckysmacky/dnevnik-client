@@ -1,6 +1,6 @@
 # Dnevnik client
 
-A tool for accessing Moscow Electronic School (МЭШ) system using RedGuyRu's [Dnevnik API](https://github.com/RedGuyRu/DnevnikApi)
+A cli tool for accessing Moscow Electronic School (МЭШ) system using RedGuyRu's [Dnevnik API](https://github.com/RedGuyRu/DnevnikApi)
 
 The project us for Russian users only, as it is just kinda useless for anyone outside the country since it uses Russan school system ¯\\_(ツ)_/¯
 

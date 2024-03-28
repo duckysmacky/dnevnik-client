@@ -1,4 +1,4 @@
-function help() {
+module.exports = function help() {
     console.log("GENERAL\nschoolInfo\nprofile\n");
     console.log("ACADEMIC\nsubjects\naverageMarks\nquarterMarks\nprogress\n");
     console.log("BY TIME\nschedule [days from today]\nhomework [days from today] [days to]");
@@ -6,5 +6,3 @@ function help() {
     console.log("BY ID\ngetTeacher <teacher id>\ngetAnswers <test id>\n");
     console.log("MISC\nnotifications [type]\nmenu\n");
 }
-
-module.exports = help;
