@@ -10,84 +10,30 @@ The project us for Russian users only, as it is just kinda useless for anyone ou
 
 ## Установка
 
-Проект пока еще находится в разработке, поэтому полноценного CLI пока нету, придется пользоваться через локальную папку с **клонированной репозиторией**
-
-Для работы необходимо установить [Dnevnik API](https://github.com/RedGuyRu/DnevnikApi)
+Для установки программы требуется [NodeJS и npm](https://nodejs.org/en/download/current)
 ```bash
-npm install dnevnik-mos-ru-api
-yarn add dnevnik-mos-ru-api
-```
-
-Затем просто клонируем репозиторию и уже оттуда пользуемся через [NodeJS](https://nodejs.org/en)
-```bash
-git clone https://github.com/duckysmacky/dnevnik-client.git
-cd dnevnik-client
+npm install -g dnevnik-client
 ```
 
 ## Аутентификация
 Сначала необходимо сгенерировать токен (будет сохранен как auth.json в локальной папке) для последующего доступа, используя логин и пароль от mos.ru:
 ```bash
-node auth <логин> <пароль>
+dnvk auth <логин> <пароль>
 ```
 
 Если у вас [включен 2FA](https://www.mos.ru/news/item/122371073/), необходимо дополнительно предоставить TOTP ключь:
 ```bash
-node auth <логин> <пароль> <totp>
+dnvk auth <логин> <пароль> -t <totp>
 ```
 
 ## Использование
 
-### Пользоваться данной программой можно (пока только) через node, вызывая client.js с нужными аргументами
+Использовать программу можно вызывая `dnvk` с нужной коммандой
 ```bash
-node client <комманда> [дополнительные аргументы]
+dnvk <комманда>
 ```
 
-### Посмотреть список всех комманд самому можно так
+Посмотреть список всех комманд можно так
 ```bash
-node client help
-```
-
-## Полный список комманд
-
-*< > - необходимо ввести*
-*[ ] - опционально*
-
-Общие
-
-```bash
-help
-schoolInfo
-profile
-```
-
-Академические
-
-```bash
-subjects
-averageMarks
-quarterMarks
-progress
-```
-
-Зависимые от времяни (дней / месяцев)
-
-```bash
-schedule [дней с сегодня]
-homework [дней с сегодня] [до какого кол-ва дней]
-visits [дней с сегодня] [до какого кол-ва дней]
-balance [месяцев с текущего] [до какого кол-ва месяцев]
-```
-
-Требуют айди
-
-```bash
-getTeacher <айди учителя>
-getAnswers <айди теста>
-```
-
-Остальные
-
-```bash
-notifications [тип уведомления]
-menu
+dnvk --help
 ```

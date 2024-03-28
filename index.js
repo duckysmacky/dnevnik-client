@@ -45,11 +45,11 @@ program
     .action(require("./commands/quarterMarks"));
 
 // TODO - fix progress command
-program
-    .command("progress")
-    .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
-    + "Получение академического прогресса")
-    .action(require("./commands/progress"))
+// program
+//     .command("progress")
+//     .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
+//     + "Получение академического прогресса")
+//     .action(require("./commands/progress"))
 
 program
     .command("schedule [days]")
@@ -68,20 +68,20 @@ program
     .action(require("./commands/homework"));
 
 // TODO - fix visits command
-program
-    .command("visits [months]")
-    .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
-    + "Получение списка посещаемости (по умолчанию: последний месяц [1])\n"
-    + "В [months] можно указать кол-во месяцев")
-    .action(require("./commands/visits"));
+// program
+//     .command("visits [months]")
+//     .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
+//     + "Получение списка посещаемости (по умолчанию: последний месяц [1])\n"
+//     + "В [months] можно указать кол-во месяцев")
+//     .action(require("./commands/visits"));
 
 // TODO - fix balance command
-program
-    .command("balance [months]")
-    .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
-    + "Получение списка посещаемости (по умолчанию: последний месяц [1])\n"
-    + "В [months] можно указать кол-во месяцев")
-    .action(require("./commands/balance"));
+// program
+//     .command("balance [months]")
+//     .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
+//     + "Получение списка посещаемости (по умолчанию: последний месяц [1])\n"
+//     + "В [months] можно указать кол-во месяцев")
+//     .action(require("./commands/balance"));
 
 program
     .command("getTeacher <id>")
@@ -91,13 +91,13 @@ program
     .action(require("./commands/getTeacher"));
 
 // TODO - fix meshAnswers with different user permissions
-program
-    .command("getAnswers <id>")
-    .aliases(["answers", "meshAnswers", "getans"])
-    .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
-    + "Получение ответов на тест из МЭШ\n"
-    + "В <id> указать айди теста")
-    .action(require("./commands/getAnswers"));
+// program
+//     .command("getAnswers <id>")
+//     .aliases(["answers", "meshAnswers", "getans"])
+//     .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
+//     + "Получение ответов на тест из МЭШ\n"
+//     + "В <id> указать айди теста")
+//     .action(require("./commands/getAnswers"));
 
 program
     .command("notifications [type]")

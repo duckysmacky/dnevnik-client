@@ -6,8 +6,8 @@
     "luxon": "^1.0.0"
   },
   "name": "dnevnik-client",
-  "description": "A cli tool for accessing Moscow Electronic School (МЭШ) system using RedGuyRu's [Dnevnik API](https://github.com/RedGuyRu/DnevnikApi)",
-  "version": "1.0.0",
+  "description": "A cli tool for accessing Moscow Electronic School (МЭШ) system using Dnevnik API",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -17,6 +17,8 @@
     "url": "git+https://github.com/duckysmacky/dnevnik-client.git"
   },
   "keywords": [
+    "cli",
+    "api",
     "dnevnik",
     "mesh",
     "mos.ru"
@@ -28,6 +30,6 @@
   },
   "homepage": "https://github.com/duckysmacky/dnevnik-client#readme",
   "bin": {
-    "dvnk": "./index.js"
+    "dnvk": "./index.js"
   }
 }
