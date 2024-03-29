@@ -13,12 +13,14 @@ program
     .description("Генерация токена для авторизации (auth.json)")
     .option("-t, --totp <totp>", "TOTP ключ для 2FA (если включена двухфакторая аутентификация в профиле mos.ru)")
     .option("-s, --show", "Показать окно браузера")
-    .option("-p, --path <path>", "Указать директорию для сохранения auth.json", process.cwd())
+    .option("-p, --path <path>", "Указать директорию для сохранения auth.json", "./")
     .action(require("./commands/auth"));
 
 program
     .command("schoolInfo")
     .alias("school")
+    .option("-f, --find <item>", "Вывод определенного элемента")
+    .option("-l, --list", "Список всех доступных элементов")
     .description("Получение всей информации о школе")
     .action(require("./commands/schoolInfo"));
 
