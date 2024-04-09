@@ -14,7 +14,9 @@ The project us for Russian users only, as it is just kinda useless for anyone ou
 
 ## Установка
 
-Для установки программы требуется [NodeJS и npm](https://nodejs.org/en/download/current)
+*Для установки программы требуется [NodeJS и npm](https://nodejs.org/en/download/current)*
+
+Установка последней версии
 ```bash
 npm install -g dnevnik-client
 ```

@@ -17,8 +17,8 @@ module.exports = async function balance(from, to) {
     if (!to) to = from;
 
     await client.getBilling(
-        DateTime.now().minus({months: from}), 
-        DateTime.now().plus({months: to})
+        DateTime.now(), 
+        DateTime.now()
     ).then(e => {
         console.log(e.balance / 100)
     }).catch(e => console.log(e));

@@ -16,7 +16,7 @@ module.exports = async function notifications(type) {
 
     await client.getNotifications().then(e => {
         for (let notification of e) {
-            if(notification.event_type === type) {
+            if (notification.event_type === type) {
                 console.log(notification.new_hw_description);
             }
         }

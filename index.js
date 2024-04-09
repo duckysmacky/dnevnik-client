@@ -46,7 +46,7 @@ program
     .description("Получение оценки по всем предметам за все четверти/триместры/полугодия")
     .action(require("./commands/quarterMarks"));
 
-// TODO - fix progress command
+// TODO - fix progress command (404 bad request)
 // program
 //     .command("progress")
 //     .description("[В РАЗРАБОТКЕ | РАБОТЕТ НЕКОРРЕКТНО]\n"
@@ -103,7 +103,8 @@ program
 
 program
     .command("notifications [type]")
-    .description("Получение последний уведомлений (по умолчанию: новое домашнее задание [create_homework])")
+    .alias("latest")
+    .description("Получение последних уведомлений")
     .action(require("./commands/notifications"));
 
 program

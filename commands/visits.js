@@ -14,7 +14,7 @@ module.exports = async function visits(months) {
     let client = new Dnevnik.Client(auth);
 
     if (!months) months = 1;
-
+    
     await client.getVisits(
         DateTime.now().minus({months: months})
     ).then(e => {
