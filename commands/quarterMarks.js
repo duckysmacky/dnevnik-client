@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function quarterMarks() {
+export async function quarterMarks() {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

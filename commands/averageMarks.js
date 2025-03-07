@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function averageMarks() {
+export async function averageMarks() {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

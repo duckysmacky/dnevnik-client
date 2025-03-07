@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function auth(login, password, {totp, show, path}) {
+export async function auth(login, password, {totp, show, path}) {
     let headless = show
         ? false
         : "new"

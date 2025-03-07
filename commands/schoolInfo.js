@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function schoolInfo({list, find}) {
+export async function schoolInfo({list, find}) {
     if (list) {
         console.log("id name type principal address phone email website_link classroom_teachers teachers branches");
         process.exit(0);

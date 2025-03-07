@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function notifications(type) {
+export async function notifications(type) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

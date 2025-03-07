@@ -1,6 +1,6 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 
-export default async function getTeacher(id) {
+export async function getTeacher(id) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

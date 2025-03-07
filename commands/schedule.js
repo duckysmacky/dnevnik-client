@@ -1,7 +1,7 @@
 import Dnevnik from "dnevnik-mos-ru-api";
 import { DateTime } from "luxon";
 
-export default async function schedule(days) {
+export async function schedule(days) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");
