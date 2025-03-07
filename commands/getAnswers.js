@@ -1,6 +1,6 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
 
-module.exports = async function getAnswers(id) {
+export default async function getAnswers(id) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");
@@ -12,7 +12,7 @@ module.exports = async function getAnswers(id) {
     await auth.authenticate();
     let client = new Dnevnik.Client(auth);
 
-    await Dnevnik.Client.getMeshAnswers(id).then(e => {
+    await client.getMeshAnswers(id).then(e => {
         for (let question of e) {
             console.log(question.question + " " + JSON.stringify(question.answer));
         }

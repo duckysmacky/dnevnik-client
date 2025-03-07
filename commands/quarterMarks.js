@@ -1,6 +1,6 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
 
-module.exports = async function quarterMarks() {
+export default async function quarterMarks() {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

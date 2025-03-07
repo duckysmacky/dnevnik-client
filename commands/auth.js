@@ -1,6 +1,6 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
 
-module.exports = async function auth(login, password, {totp, show, path}) {
+export default async function auth(login, password, {totp, show, path}) {
     let headless = show
         ? false
         : "new"
@@ -9,7 +9,6 @@ module.exports = async function auth(login, password, {totp, show, path}) {
         ? new Dnevnik.PuppeteerAuthenticator(login, password, {headless: headless, totp: Number(totp)})
         : new Dnevnik.PuppeteerAuthenticator(login, password, {headless: headless});
 
-    // Auth setup
     console.log("Аутентификация...");
     await auth.init();
     await auth.authenticate();

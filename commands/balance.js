@@ -1,7 +1,7 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
-const {DateTime, Interval} = require("luxon");
+import Dnevnik from "dnevnik-mos-ru-api";
+import { DateTime } from "luxon";
 
-module.exports = async function balance(from, to) {
+export default async function balance(from, to) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");

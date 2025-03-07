@@ -1,6 +1,6 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
 
-module.exports = async function schoolInfo({list, find}) {
+export default async function schoolInfo({list, find}) {
     if (list) {
         console.log("id name type principal address phone email website_link classroom_teachers teachers branches");
         process.exit(0);

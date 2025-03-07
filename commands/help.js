@@ -1,4 +1,4 @@
-module.exports = function help() {
+export default function help() {
     console.log("GENERAL\nschoolInfo\nprofile\n");
     console.log("ACADEMIC\nsubjects\naverageMarks\nquarterMarks\nprogress\n");
     console.log("BY TIME\nschedule [days from today]\nhomework [days from today] [days to]");

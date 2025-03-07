@@ -1,6 +1,7 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
+
 // TODO - make output somehow readable
-module.exports = async function profile() {
+export default async function profile() {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");
@@ -8,12 +9,13 @@ module.exports = async function profile() {
         console.log("Ошибка! Сначала необходимо сгенерировать токен для авторизации: dvnk auth");
         console.log(error);
     }
+
     await auth.init();
     await auth.authenticate();
     let client = new Dnevnik.Client(auth);
 
     await client.getProfile({
-        with_groups:true,
+        with_groups: true,
         with_ae_attendances: true,
         with_attendances: true,
         with_ec_attendances: true,

@@ -1,6 +1,6 @@
-const Dnevnik = require("dnevnik-mos-ru-api");
+import Dnevnik from "dnevnik-mos-ru-api";
 
-module.exports = async function getTeacher(id) {
+export default async function getTeacher(id) {
     let auth;
     try {
         auth = new Dnevnik.FileAuthenticator("auth.json");
